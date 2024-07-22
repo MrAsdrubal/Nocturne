@@ -1,9 +1,14 @@
-package org.example.login;
+package Controlador;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 
-public class HelloController {
+import javafx.scene.control.Label;
+import javafx.scene.shape.Circle;
+
+
+public class ControladorRegistro {
+
     @FXML
     private Label welcomeText;
 

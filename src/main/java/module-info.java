@@ -8,4 +8,6 @@ module org.example.login {
 
     opens org.example.login to javafx.fxml;
     exports org.example.login;
+    exports Controlador;
+    opens Controlador to javafx.fxml;
 }

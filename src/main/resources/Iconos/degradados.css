@@ -1,0 +1,10 @@
+/*Degradado para el main principal*/
+.degradado1 {
+    -fx-background-color: linear-gradient(to left, #A5A6B7, #2F404F);
+}
+
+/*Segundo degradado para el menú principal*/
+
+.degradado2 {
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%,#F5D4D4,#B0C0CB, #8F7C7C);
+}

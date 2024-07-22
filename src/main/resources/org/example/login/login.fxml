@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="361.0" prefWidth="505.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.login.HelloController">
+<VBox alignment="CENTER" focusTraversable="true" prefHeight="347.0" prefWidth="509.0" spacing="20.0" stylesheets="@../../../Iconos/degradados.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorRegistro">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
-   <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: purple;" />
-   <ImageView fitHeight="132.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-         <Image url="@../../../Iconos/Logo.jpeg" />
-      </image>
-   </ImageView>
+   <AnchorPane prefHeight="134.0" prefWidth="470.0" styleClass="degradado1" stylesheets="@../../../Iconos/degradado1.css">
+      <children>
+         <ImageView fitHeight="134.0" fitWidth="134.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../Iconos/Logo.jpeg" />
+            </image>
+         </ImageView>
+         <Label contentDisplay="BOTTOM" layoutX="209.0" layoutY="50.0" text="NOCTURNE" textOverrun="LEADING_ELLIPSIS">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
+      </children></AnchorPane>
    <AnchorPane prefHeight="85.0" prefWidth="398.0">
       <children>
          <Button layoutX="190.0" layoutY="14.0" mnemonicParsing="false" onAction="#onHelloButtonClick" text="Iniciar Sesión" />
         <Button layoutX="174.0" layoutY="59.0" onAction="#onHelloButtonClick" text="Crear nueva cuenta" />
       </children>
    </AnchorPane>
+   <styleClass>
+      <String fx:value="degradado1" />
+      <String fx:value="degradado2" />
+   </styleClass>
+
+   <effect>
+      <ColorAdjust />
+   </effect>
 </VBox>
