@@ -1,8 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="brackground" stylesheets="@../../../Iconos/degradados.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.login.Pruebas">
-
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@../../../Iconos/degradados.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorInicioSesion">
+   <styleClass>
+      <String fx:value="brackground" />
+      <String fx:value="degradado3" />
+   </styleClass>
+   <children>
+      <Button layoutX="285.0" layoutY="426.0" mnemonicParsing="false" onAction="#validarCuenta" prefHeight="35.0" prefWidth="129.0" styleClass="degradado2" stylesheets="@../../../Iconos/formas.css" text="Ingresar">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font></Button>
+      <SplitPane dividerPositions="0.5" layoutX="207.0" layoutY="265.0" prefHeight="43.0" prefWidth="271.0" stylesheets="@../../../Iconos/formas.css">
+         <items>
+            <ImageView fitHeight="33.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Iconos/usuario.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="user" prefHeight="38.0" prefWidth="210.0" promptText="Usuario">
+               <font>
+                  <Font name="SansSerif Regular" size="16.0" />
+               </font></TextField>
+         </items>
+         <styleClass>
+            <String fx:value="degradado3" />
+            <String fx:value="boton_curveado2" />
+         </styleClass>
+      </SplitPane>
+      <SplitPane dividerPositions="0.1869436201780416" layoutX="203.0" layoutY="335.0" prefHeight="43.0" prefWidth="271.0" stylesheets="@../../../Iconos/formas.css">
+         <items>
+            <ImageView fitHeight="39.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Iconos/contraseña.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="contraseña" prefHeight="38.0" prefWidth="217.0" promptText="Contraseña">
+               <font>
+                  <Font size="16.0" />
+               </font></PasswordField>
+         </items>
+         <styleClass>
+            <String fx:value="degradado3" />
+            <String fx:value="boton_curveado2" />
+         </styleClass>
+      </SplitPane>
+      <AnchorPane layoutX="1.0" layoutY="-4.0" prefHeight="208.0" prefWidth="700.0">
+         <children>
+            <ImageView fitHeight="182.0" fitWidth="173.0" layoutX="252.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Iconos/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="errorMensaje" layoutX="233.0" layoutY="390.0" prefHeight="26.0" prefWidth="234.0" text="El usuario o la contraseña son incorrectos !!" textFill="#fadfdf" visible="false" />
+   </children>
 </AnchorPane>
