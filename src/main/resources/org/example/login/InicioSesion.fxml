@@ -17,53 +17,68 @@
       <String fx:value="degradado3" />
    </styleClass>
    <children>
-      <Button layoutX="285.0" layoutY="426.0" mnemonicParsing="false" onAction="#validarCuenta" prefHeight="35.0" prefWidth="129.0" styleClass="degradado2" stylesheets="@../../../Iconos/formas.css" text="Ingresar">
-         <font>
-            <Font name="SansSerif Regular" size="14.0" />
-         </font></Button>
-      <SplitPane dividerPositions="0.5" layoutX="207.0" layoutY="265.0" prefHeight="43.0" prefWidth="271.0" stylesheets="@../../../Iconos/formas.css">
-         <items>
-            <ImageView fitHeight="33.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Iconos/usuario.png" />
-               </image>
-            </ImageView>
-            <TextField fx:id="user" prefHeight="38.0" prefWidth="210.0" promptText="Usuario">
-               <font>
-                  <Font name="SansSerif Regular" size="16.0" />
-               </font></TextField>
-         </items>
-         <styleClass>
-            <String fx:value="degradado3" />
-            <String fx:value="boton_curveado2" />
-         </styleClass>
+      <SplitPane dividerPositions="0.4578804347826087" layoutX="145.0" layoutY="28.0" orientation="VERTICAL" prefHeight="443.0" prefWidth="426.0" styleClass="boton_curveado" stylesheets="@../../../Iconos/formas.css">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="204.0" prefWidth="410.0">
+               <children>
+                  <ImageView fitHeight="173.0" fitWidth="180.0" layoutX="126.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="13.199999999999989" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="125.80000000000001" AnchorPane.topAnchor="13.0">
+                     <image>
+                        <Image url="@../../../Iconos/Logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <styleClass>
+                  <String fx:value="moradoDegradado" />
+                  <String fx:value="boton_curveado" />
+               </styleClass>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="425.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" layoutX="76.0" layoutY="31.0" prefHeight="43.0" prefWidth="271.0" stylesheets="@../../../Iconos/formas.css">
+                     <items>
+                        <ImageView fitHeight="33.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Iconos/usuario.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="user" onAction="#ocultarError" prefHeight="38.0" prefWidth="214.0" promptText="Usuario">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                     </items>
+                     <styleClass>
+                        <String fx:value="moradoDegradado" />
+                        <String fx:value="boton_curveado2" />
+                     </styleClass>
+                  </SplitPane>
+                  <SplitPane dividerPositions="0.15430267062314543" layoutX="76.0" layoutY="93.0" prefHeight="50.0" prefWidth="271.0" stylesheets="@../../../Iconos/formas.css">
+                     <items>
+                        <ImageView fitHeight="40.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Iconos/contraseña.png" />
+                           </image>
+                        </ImageView>
+                        <PasswordField fx:id="contraseña" onAction="#ocultarError" prefHeight="42.0" prefWidth="243.0" promptText="Contraseña">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </PasswordField>
+                     </items>
+                     <styleClass>
+                        <String fx:value="moradoDegradado" />
+                        <String fx:value="boton_curveado2" />
+                     </styleClass>
+                  </SplitPane>
+                  <Button layoutX="147.0" layoutY="167.0" mnemonicParsing="false" onAction="#validarCuenta" prefHeight="35.0" prefWidth="129.0" styleClass="degradado2" stylesheets="@../../../Iconos/formas.css" text="Ingresar">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="errorMensaje" layoutX="112.0" layoutY="154.0" prefHeight="26.0" prefWidth="234.0" text="El usuario o la contraseña son incorrectos !!" textFill="#5b439c" visible="false" />
+               </children>
+            </AnchorPane>
+        </items>
       </SplitPane>
-      <SplitPane dividerPositions="0.1869436201780416" layoutX="203.0" layoutY="335.0" prefHeight="43.0" prefWidth="271.0" stylesheets="@../../../Iconos/formas.css">
-         <items>
-            <ImageView fitHeight="39.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Iconos/contraseña.png" />
-               </image>
-            </ImageView>
-            <PasswordField fx:id="contraseña" prefHeight="38.0" prefWidth="217.0" promptText="Contraseña">
-               <font>
-                  <Font size="16.0" />
-               </font></PasswordField>
-         </items>
-         <styleClass>
-            <String fx:value="degradado3" />
-            <String fx:value="boton_curveado2" />
-         </styleClass>
-      </SplitPane>
-      <AnchorPane layoutX="1.0" layoutY="-4.0" prefHeight="208.0" prefWidth="700.0">
-         <children>
-            <ImageView fitHeight="182.0" fitWidth="173.0" layoutX="252.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Iconos/Logo.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <Label fx:id="errorMensaje" layoutX="233.0" layoutY="390.0" prefHeight="26.0" prefWidth="234.0" text="El usuario o la contraseña son incorrectos !!" textFill="#fadfdf" visible="false" />
    </children>
 </AnchorPane>

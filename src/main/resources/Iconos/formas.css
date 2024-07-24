@@ -11,8 +11,4 @@
     -fx-border-radius: 7; /* Radio de los bordes del borde */
     -fx-border-width: 2; /* Ancho del borde del botón */
 }
-.estilo1 {
-    border-radius: 52px 49px 44px 53px;
-    background: linear-gradient( #F5D4D4 0%, #B0C0CB 48.5%, #8F7C7C 100%);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
+

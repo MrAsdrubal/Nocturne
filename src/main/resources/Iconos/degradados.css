@@ -8,3 +8,14 @@
 .degradado2 {
     -fx-background-color: linear-gradient(from 0% 0% to 0% 100%,#F5D4D4,#B0C0CB, #8F7C7C);
 }
+
+.colorGrisOscuro{
+    -fx-background-color: #637A86;
+}
+.degradado3{
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%,#FFB3B3,#CC4E5C, #CC4E5C, #661A33);
+}
+.moradoDegradado {
+    -fx-background-color: linear-gradient( #800080, #000080);
+
+}

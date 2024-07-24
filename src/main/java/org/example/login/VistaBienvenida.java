@@ -1,6 +1,6 @@
 package org.example.login;
 
-import Controlador.ControladorRegistro;
+import Controlador.ControladorBienvenida;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,17 +8,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class VistaRegistro extends Application {
+public class VistaBienvenida extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(VistaRegistro.class.getResource("InicioSesion.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 650, 450);
+        FXMLLoader fxmlLoader = new FXMLLoader(VistaBienvenida.class.getResource("login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 700, 500);
         stage.setScene(scene);
-        ControladorRegistro controladorRegistro = fxmlLoader.getController();
+        ControladorBienvenida controladorRegistro = fxmlLoader.getController();
         controladorRegistro.setStage(stage);
         stage.show();
-
     }
 
     public static void main(String[] args) {
