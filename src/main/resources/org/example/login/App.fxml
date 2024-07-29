@@ -8,55 +8,47 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<SplitPane cache="true" depthTest="ENABLE" dividerPositions="0.25957257346393586" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorAPP">
+<SplitPane cache="true" depthTest="ENABLE" dividerPositions="0.2573463935886019" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorAPP">
     <items>
-        <SplitPane dividerPositions="0.18499197431781703" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" styleClass="moradoDegradado" stylesheets="@../../../Iconos/degradados.css">
+        <SplitPane dividerPositions="0.14686998394863565" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" styleClass="moradoDegradado" stylesheets="@../../../Iconos/degradados.css">
             <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="75.0" prefWidth="898.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="101.0" prefWidth="224.0">
                     <children>
-                        <ImageView fitHeight="48.0" fitWidth="45.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#mostrarChats" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="47.0" fitWidth="46.0" layoutX="20.0" layoutY="22.0" onMouseClicked="#mostrarChats" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../Iconos/mensaje.png" />
                             </image>
                         </ImageView>
                     </children>
                 </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="422.0" prefWidth="266.0">
-                    <children>
-                        <ScrollPane fx:id="scrollPane" prefHeight="422.0" prefWidth="232.0">
-                            <content>
-                                <VBox fx:id="usersBox" prefHeight="57.0" prefWidth="238.0" spacing="10" />
-                            </content>
-                        </ScrollPane>
-                    </children>
-                </AnchorPane>
+                  <ScrollPane fx:id="scrollPane" prefHeight="418.0" prefWidth="230.0">
+                      <content>
+                          <VBox fx:id="usersBox" prefHeight="58.0" prefWidth="231.0" spacing="10" />
+                      </content>
+                  </ScrollPane>
             </items>
         </SplitPane>
-      <VBox prefHeight="498.0" prefWidth="562.0">
+      <VBox prefHeight="498.0" prefWidth="622.0">
          <children>
-            <AnchorPane prefHeight="107.0" prefWidth="662.0" styleClass="colorGrisOscuro" stylesheets="@../../../Iconos/degradados.css">
+            <AnchorPane prefHeight="70.0" prefWidth="662.0" styleClass="colorGrisOscuro" stylesheets="@../../../Iconos/degradados.css">
                <children>
-                  <ImageView fitHeight="94.0" fitWidth="91.0" onDragDetected="#iniciarConversación" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="77.0" fitWidth="75.0" onDragDetected="#iniciarConversación" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../Iconos/Logo.png" />
                      </image>
                   </ImageView>
+                  <VBox layoutX="75.0" layoutY="8.0" prefHeight="60.0" prefWidth="234.0" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="352.0" prefWidth="662.0" styleClass="moradoDegradado" stylesheets="@../../../Iconos/degradados.css">
-               <children>
-                  <ScrollPane prefHeight="336.0" prefWidth="662.0">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="336.0" prefWidth="663.0">
-                           <children>
-                              <VBox fx:id="conversacionUsuario" prefHeight="71.0" prefWidth="662.0" />
-                           </children>
-                        </AnchorPane>
-                    </content>
-                  </ScrollPane>
-               </children>
-            </AnchorPane>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="86.0" prefWidth="662.0" styleClass="colorGrisOscuro" stylesheets="@../../../Iconos/degradados.css" />
+            <ScrollPane minWidth="-Infinity" prefHeight="358.0" prefWidth="668.0">
+               <content>
+                  <VBox fx:id="conversacionUsuario" prefHeight="135.0" prefWidth="668.0" spacing="0.5">
+                     <padding>
+                        <Insets left="0.5" right="0.5" top="0.5" />
+                     </padding></VBox>
+               </content>
+            </ScrollPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="67.0" prefWidth="670.0" styleClass="colorGrisOscuro" stylesheets="@../../../Iconos/degradados.css" />
          </children>
       </VBox>
     </items>

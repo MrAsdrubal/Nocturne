@@ -14,7 +14,7 @@ public class VistaBienvenida extends Application {
     public void start(Stage stage) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(VistaBienvenida.class.getResource("App.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 550);
+        Scene scene = new Scene(fxmlLoader.load(), 900, 500);
         stage.setScene(scene);
         ControladorAPP controladorAPP = fxmlLoader.getController();
         controladorAPP.setStage(stage);
