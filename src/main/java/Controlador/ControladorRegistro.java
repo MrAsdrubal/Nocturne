@@ -1,7 +1,7 @@
 package Controlador;
 
 import Logica.Autenticacion;
-import com.dlsc.formsfx.model.structure.PasswordField;
+import javafx.scene.control.PasswordField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -17,33 +17,33 @@ private Stage stage;
     @FXML
     private TextField apellidosUsuario;
     @FXML
-    private PasswordField contrasena;
+    private PasswordField contraseña;
     @FXML
     private Label estadoContraseña;
 
     @FXML
-    private PasswordField contrasenaConfirmada;
+    private PasswordField confirmarContraseña;
 
     @FXML
     void initialize() {
         // Añade un listener al campo de contraseña para evaluar la seguridad de la contraseña mientras se escribe
-       // contrasena.idProperty().addListener((observable, oldValue, newValue) -> evaluarSeguridadContraseña(newValue));
+        contraseña.idProperty().addListener((observable, oldValue, newValue) -> evaluarSeguridadContraseña(newValue));
     }
 
     private void evaluarSeguridadContraseña(String contraseña) {
-//        if(Autenticacion.validarContrasena(contraseña)) {
-//            estadoContraseña.setText("Contraseña segura");
-//        } else {
-//            estadoContraseña.setText("Contraseña insegura");
-//        }
+        if(Autenticacion.validarContrasena(contraseña)) {
+            estadoContraseña.setText("Contraseña segura");
+        } else {
+            estadoContraseña.setText("Contraseña insegura");
+        }
     }
 
     @FXML
     void validarContraseña(ActionEvent event) {
         // verificar que todos los campos estén llenos
-//        if (nombresUsuario.getText().isEmpty() || apellidosUsuario.getText().isEmpty() || contrasena.getID().isEmpty() || contrasenaConfirmada.getID().isEmpty()) {
-//            estadoContraseña.setText("Por favor, llene todos los campos");
-//        }
+        if (nombresUsuario.getText().isEmpty() || apellidosUsuario.getText().isEmpty() || contraseña.getId().isEmpty() || confirmarContraseña.getId().isEmpty()) {
+            estadoContraseña.setText("Por favor, llene todos los campos");
+        }
     }
 
     public void setStage(Stage stage) {
